@@ -1,0 +1,33 @@
+{% extends 'index.html'%}
+
+{% block body %}
+
+<div class="table-container">
+    <div class="table-details">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Movie name</th>
+                    <th>Release Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies['results'] %}
+                <tr>
+                    <td>{{ movie['title'] }}</td>
+                    <td>{{ movie['release_date'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="/">Back to home</a>
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}

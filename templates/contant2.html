@@ -1,0 +1,38 @@
+{% extends 'index.html'%}
+
+
+{% block body %}
+
+<div class="table-container">
+    <div class="table-details">
+
+        <table>
+            <thead>
+                <tr>
+                    <th> Name</th>
+                    <th>Release date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in datas %}
+
+                {% if condition in data[0].lower() %}
+                <tr>
+                    <td>{{ data[0] }}</td>
+                    <td>{{ data[1] }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="/" class="back-to-home-link">Back to home</a>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
